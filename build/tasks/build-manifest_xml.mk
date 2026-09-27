@@ -12,13 +12,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifdef MANIFEST_EXCLUDES
-MANIFEST_EXCLUDES := |$(MANIFEST_EXCLUDES)
-endif
-
-$(INSTALLED_BUILD_MANIFEST_XML_TARGET):
-	mkdir -p $(dir $@)
-	REPO_TRACE=0 python3 .repo/repo/repo manifest -o - -r | grep -Ev "proprietary_$(MANIFEST_EXCLUDES)" > $@
-
-.PHONY: build-manifest.xml
-build-manifest.xml: $(INSTALLED_BUILD_MANIFEST_XML_TARGET)
