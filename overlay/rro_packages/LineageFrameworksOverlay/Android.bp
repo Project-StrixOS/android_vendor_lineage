@@ -6,4 +6,5 @@
 runtime_resource_overlay {
     name: "LineageFrameworksOverlay",
     system_ext_specific: true,
+    stem: "LosFrameworksOverlay",
 }
