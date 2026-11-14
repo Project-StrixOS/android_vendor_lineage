@@ -242,7 +242,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
-    LineageFrameworksOverlay \
+    LosFrameworksOverlay \
     NetworkStackOverlay \
     PermissionControllerOverlay
 
